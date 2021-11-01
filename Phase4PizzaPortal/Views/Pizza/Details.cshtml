@@ -1,0 +1,46 @@
+﻿@model Phase4PizzaPortal.Models.PizzaModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="container">Details</h1>
+
+<div class="container">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Name:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PName)
+        </dd>
+        <dt class="col-sm-2">
+            Crust Size
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PCrustSize)
+        </dd>
+        <dt class="col-sm-2">
+            Description
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PDesc)
+        </dd>
+        <dt class="col-sm-2">
+            Price
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PPrice)
+        </dd>
+        <dt class="col-sm-2">
+            Image
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Model.PImage" alt="Pizza Image" height="200" />
+        </dd>
+    </dl>
+</div>
+<div class="container">
+    <a id="back" asp-action="Index">Back to List</a>
+</div>
